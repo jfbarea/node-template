@@ -7,7 +7,7 @@ const http = require('http');
 const routes = require('../routes/index.js');
 const settings = require('../settings.js');
 const log = require('../lib/log.js');
-var app = express();
+let app = express();
 
 // Basic configuration
 app.set('port', settings.PORT);
@@ -25,8 +25,8 @@ routes.index.forEach((route) => {
 
 // Server creation
 
-var port = app.get('port');
-var server = http.createServer(app);
+let port = app.get('port');
+let server = http.createServer(app);
 server.on('connection', (socket) => {socket.setTimeout(1000 * 60 * 60);});
 server.listen(port, () => {
   console.log(`Running on port number: ${port}`);

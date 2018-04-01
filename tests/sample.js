@@ -7,7 +7,7 @@ require('mocha');
 require('should');
 require('winston');
 require('assert');
-var SERVER = 'http://localhost:' + settings.PORT;
+let SERVER = 'http://localhost:' + settings.PORT;
 describe('Sample Functions --', function() {
   this.timeout(60 * 5 * 1000);
   it('SAMPLE GET', function (done){

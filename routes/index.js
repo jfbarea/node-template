@@ -1,6 +1,6 @@
 const sample = require('./sample.js');
 const constants = require('../constants.js');
-var routes = [
+let routes = [
   {
     path: '/sample-get',
     route: sample.sampleGet,
